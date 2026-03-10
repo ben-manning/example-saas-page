@@ -22,7 +22,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 	color: black;
 	background: white;
 }
@@ -47,18 +47,36 @@ blockquote, q {
 }
 
 :root {
-  --color-primary:
+  /* --color-primary:
   --color-secondary:
   --color-bg:
-  --color-text:
+  --color-text: */
 
-  --spacing-sm:
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --text-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* --spacing-sm:
   --spacing-md:
-  --spacing-lg:
+  --spacing-lg: */
 
-  --radius:
-  --container-width:
+  /* --radius:
+  --container-width: */
 }
 
 body {
+  background-color: #fafafa;
+  color: #1f2933;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+  line-height: var(--line-height-base);
+}
+
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
