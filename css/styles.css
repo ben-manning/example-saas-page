@@ -1,17 +1,119 @@
+/* adding a CSS reset from Eric Meyer per Stack Overflow recommendation. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1.5;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
 :root {
-  --color-primary:
+  /* --color-primary:
   --color-secondary:
   --color-bg:
-  --color-text:
+  --color-text: */
 
-  --spacing-sm:
-  --spacing-md:
-  --spacing-lg:
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --text-base: 1rem;
+  --line-height-base: 1.6;
 
-  --radius:
-  --container-width:
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+
+  /* --radius:
+  --container-width: */
 }
 
 body {
-  background-color: aqua;
+  background-color: #fafafa;
+  color: #1f2933;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+  line-height: var(--line-height-base);
+}
+
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Primary button */
+.btn--primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Secondary button */
+.btn--secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+/* Hover state */
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Disabled state */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
