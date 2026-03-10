@@ -118,12 +118,16 @@ body {
   cursor: not-allowed;
 }
 
+.logo {
+  height: auto;
+  max-width: 100%;
+}
+
 
 /* Base styles apply to mobile */
 @media (max-width: 768px) {
-  img {
-    height: 150px;
-    max-width: 100%;
+  .logo {
+    width: 120px;
   }
 
   nav {
