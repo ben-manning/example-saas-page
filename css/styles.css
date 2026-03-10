@@ -1,3 +1,17 @@
+:root {
+  --color-primary:
+  --color-secondary:
+  --color-bg:
+  --color-text:
+
+  --spacing-sm:
+  --spacing-md:
+  --spacing-lg:
+
+  --radius:
+  --container-width:
+}
+
 body {
   background-color: aqua;
 }
