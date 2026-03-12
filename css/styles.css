@@ -47,10 +47,10 @@ blockquote, q {
 }
 
 :root {
-  /* --color-primary:
-  --color-secondary:
-  --color-bg:
-  --color-text: */
+  --color-primary: #2563eb;
+  --color-secondary: #e5e7eb;
+  --color-bg: #fafafa;
+  --color-text: #1f2933;
 
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
   --text-base: 1rem;
@@ -62,8 +62,8 @@ blockquote, q {
   --space-4: 1.5rem;
   --space-5: 2rem;
 
-  /* --radius:
-  --container-width: */
+  --radius: 8px;
+  --container-width: 1200px;
 }
 
 body {
