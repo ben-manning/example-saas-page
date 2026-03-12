@@ -171,6 +171,29 @@ body {
   height: auto;
 }
 
+.features__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.features__card {
+  border: 1px solid var(--color-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.features__headline {
+  font-size: 1.4rem;
+}
+
+.features__copy {
+  text-align: center;
+}
+
 
 /* Base styles apply to mobile */
 @media (max-width: 768px) {
