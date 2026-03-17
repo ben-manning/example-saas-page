@@ -1,5 +1,5 @@
-const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const toggle = document.querySelector('.nav__toggle');
+const navLinks = document.querySelector('.nav__links');
 
 toggle.addEventListener('click', (e) => {
   e.stopPropagation();
@@ -13,7 +13,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 document.addEventListener('click', (e) => {
-  if (!e.target.closest('nav')) closeMenu();
+  if (!e.target.closest('.nav')) closeMenu();
 });
 
 function closeMenu() {
@@ -21,3 +21,15 @@ function closeMenu() {
   toggle.classList.remove('is-open');
   toggle.setAttribute('aria-expanded', false);
 }
+
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeEls.forEach(el => observer.observe(el));
